@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap');
+body {
+    box-sizing: border-box;
+    background-color: black;
+    background-position: top;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.img-display {
+    display: none;
+}
+
+h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 5px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: rgb(255, 208, 0);
+    background-color: black;
+}
+
+h1 {
+    animation-name: example;
+    animation-duration: 4s;
+    margin-left: 10%;
+}
+
+@keyframes example {
+    0% {
+        color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    100% {
+        color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5px;
+    flex-grow: 2;
+    padding: 20px;
+    background-image: url("https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+}
+
+#demo-output {
+    background-color: white;
+    padding: 2.5px;
+    margin-bottom: 40px;
+}
+
+#area,
+#timetable,
+#show-table {
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+    width: 30vh;
+}
+
+#show-table {
+    text-align: center;
+    background-color: rgb(255, 208, 0);
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    margin-right: 0;
+}
+
+#nowshowing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 140vh;
+}
+
+img {
+    margin: 10px;
+    border: white 2px solid;
+}
+
+hr {
+    width: 10%;
+}
+
+#schedule {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: rgba(255, 208, 0, 0.503);
+    width: 100vh;
+}
+
+.images {
+    width: 99px;
+    height: 146px;
+    margin-left: 0;
+    position: relative;
+    color: white;
+}
+
+p {
+    padding: 5px;
+    color: white;
+}
+
+.movie-info {
+    display: inline;
+    margin-bottom: 10px;
+    background-color: black;
+    flex-wrap: wrap;
+    flex-grow: inherit;
+    flex-shrink: inherit;
+}
+
+h3 {
+    color: white;
+}
