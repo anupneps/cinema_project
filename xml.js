@@ -72,7 +72,8 @@ function showDateTime(date) {
 
     for (let i = 0; i < timetable.length; i++) {
         const li = document.createElement('option');
-        let date = new Date(timetable[i].textContent).toLocaleDateString("fi-FI"); // converting the API date format to local date format
+
+        let date = new Date(timetable[i].textContent).toLocaleDateString("ru-RU"); // converting the API date format to local date format
         li.textContent = date;
         list.appendChild(li);
     }
@@ -126,10 +127,15 @@ searchBtn.addEventListener('click', () => {
     const selectEl = document.querySelector("#area");
     const selectedAreaId = selectEl.value; // targeting the parameter using the ID attribute
 
+    const dateFormat = document.querySelector("#timetable");
+    let SelectedDate = dateFormat.value;
+    // console.log(dateFormat);
+
+
 
     // XMLHTTP request as per the selection by users.
 
-    let url = `https://www.finnkino.fi/xml/Schedule?area=${selectedAreaId}&dt=`;
+    let url = `https://www.finnkino.fi/xml/Schedule?area=${selectedAreaId}&dt=${SelectedDate}`;
     fetch(url)
         .then(response => response.text())
         .then(data => {
