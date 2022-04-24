@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// XMLHTTP request to get the area from the finnkino API
+// XMLHTTP request to get the theatre areas from the finnkino API
 
 function updateTheatreAreas() {
     let url = "https://www.finnkino.fi/xml/TheatreAreas";
@@ -72,7 +72,7 @@ function showDateTime(date) {
 
     for (let i = 0; i < timetable.length; i++) {
         const li = document.createElement('option');
-        let date = new Date(timetable[i].textContent).toLocaleDateString("fi-FI"); // converting the API to local date style
+        let date = new Date(timetable[i].textContent).toLocaleDateString("fi-FI"); // converting the API date format to local date format
         li.textContent = date;
         list.appendChild(li);
     }
@@ -94,7 +94,7 @@ function updateNowShowing() {
         });
 }
 
-// Displaying the XMLHTTP response (20 currently in theatre movie poster in the landing page) to the option element in webpage
+// Displaying the XMLHTTP response - 20 currently in theatre movie poster in the landing page) 
 
 function showThumbnails(date) {
     const list = document.getElementById('nowshowing');
@@ -103,7 +103,7 @@ function showThumbnails(date) {
     const thumbnail = Array.from(thumbnails);
 
     // console.log(thumbnail);
-
+    // looping through the images from xml document
     for (let i = 0; i < 20; i++) {
         const li = document.createElement('img');
         let image = thumbnail[i].innerHTML;
